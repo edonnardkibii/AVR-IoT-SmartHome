@@ -18,6 +18,7 @@ try:
     key = bytes.fromhex(config['login']['aes_key'])
     iv = bytes.fromhex(config['login']['aes_iv'])
     block_size = AES.block_size
+    #cipher = AES.new(key, AES.MODE_CBC, iv)
 	
 except (ValueError, KeyError):
 	print("Incorrect Decryption Keys")
